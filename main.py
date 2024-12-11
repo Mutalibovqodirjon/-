@@ -237,17 +237,16 @@
 # print(f("Banan", 7000))
 # print(f("Anor", 10000))
 
-#  18 misol
-# def fff():
-#     narxlar = []
-#
-#     def ff2(narx):
-#         narxlar.append(narx)
-#         return narxlar
-#
-#     return ff2
-#
-# f = fff()
-# print(f(5000))
-# print(f(7000))
-# print(f(10000))
+# 18 misol
+narxlar = []
+def fff():
+    def ff2(narx):
+        global narxlar
+        narxlar.append(narx)
+    return ff2
+
+f = fff()
+f(5000)
+f(7000)
+f(10000)
+print(narxlar)
